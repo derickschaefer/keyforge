@@ -65,8 +65,9 @@ make test
 make fmt
 make build-binaries
 make clean
+```
 
-## 📋 Roadmap
+## Roadmap
 
 - [x] Easy / strong password generators  
 - [x] WEP 64/128/256 hex keys  
@@ -76,12 +77,12 @@ make clean
 
 ---
 
-## 📜 License
+## License
 
 [MIT](LICENSE)
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Feel free to open issues and pull requests.  
