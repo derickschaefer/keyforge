@@ -11,3 +11,6 @@
 .vscode/
 .idea/
 *.swp
+
+# Local helper scripts
+git_push.sh
