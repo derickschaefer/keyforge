@@ -69,11 +69,40 @@ make clean
 
 ## Roadmap
 
+## Roadmap
+
 - [x] Easy / strong password generators  
 - [x] WEP 64/128/256 hex keys  
 - [x] Password analyzer (offline)  
 - [ ] AI-powered analyzer (OpenAI GPT-4o-mini integration)  
-- [ ] Packaging for GitHub Releases  
+- [ ] Packaging for GitHub Releases
+
+### Refactoring Opportunities
+
+Mixed Concerns - Generation logic, CLI handling, and presentation are all jumbled together
+Code Duplication - Lots of similar for loops for different password types
+File Responsibilities - Single files doing too many things
+Testing Difficulty - Hard to unit test individual components
+
+### Suggested File Structure:
+Core Generation Logic (internal/generator/)
+
+password.go - Core password generation functions
+wep.go - WEP key generation specifically
+types.go - Password type definitions and interfaces
+generator.go - Main generator orchestrator
+
+### Presentation Layer (internal/output/)
+
+formatter.go - JSON vs plain text formatting
+printer.go - Console output logic
+templates.go - Output templates/formatting
+
+### CLI Layer (cmd/)
+
+create.go - Just the cobra command definitions and flag parsing
+create_set.go - Set-specific command logic
+config.go - Configuration structs and validation
 
 ---
 
